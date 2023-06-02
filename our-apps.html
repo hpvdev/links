@@ -124,29 +124,29 @@
     <script>
       // JavaScript code
 
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      // const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-      console.log(userAgent);
+      // console.log(userAgent);
 
-      // Kiểm tra hệ điều hành là Android
-      if (userAgent.includes("Android")) {
-        const androidLinks = document.querySelectorAll(
-          '.download-link[data-os="android"]'
-        );
-        androidLinks.forEach((link) => {
-          link.style.display = "inline-block"; // Hiển thị nút tải xuống Android
-        });
-      }
+      // // Kiểm tra hệ điều hành là Android
+      // if (userAgent.includes("Android")) {
+      //   const androidLinks = document.querySelectorAll(
+      //     '.download-link[data-os="android"]'
+      //   );
+      //   androidLinks.forEach((link) => {
+      //     link.style.display = "inline-block"; // Hiển thị nút tải xuống Android
+      //   });
+      // }
 
-      // Kiểm tra hệ điều hành là iOS
-      if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
-        const iosLinks = document.querySelectorAll(
-          '.download-link[data-os="ios"]'
-        );
-        iosLinks.forEach((link) => {
-          link.style.display = "inline-block"; // Hiển thị nút tải xuống iOS
-        });
-      }
+      // // Kiểm tra hệ điều hành là iOS
+      // if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
+      //   const iosLinks = document.querySelectorAll(
+      //     '.download-link[data-os="ios"]'
+      //   );
+      //   iosLinks.forEach((link) => {
+      //     link.style.display = "inline-block"; // Hiển thị nút tải xuống iOS
+      //   });
+      // }
 
       // Sample array of apps
       const apps = [
