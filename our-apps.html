@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Apps</title>
+  <style>
+    /* CSS styles */
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .app-list {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .app-item {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .app-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .app-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .app-description {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .download-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .download-link:hover {
+      background-color: #0055a5;
+    }
+
+    /* New styles */
+
+    .app-list {
+      background-color: #f1f6fd;
+      padding: 40px;
+    }
+
+    .app-item {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .app-name {
+      color: #333;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .app-description {
+      color: #777;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .download-link {
+      background-color: #ff4081;
+      font-weight: bold;
+    }
+
+    .download-link:hover {
+      background-color: #ff1a5e;
+    }
+
+    .disabled-link {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-list">
+    <h1>Our Apps</h1>
+
+    <div id="app-container"></div>
+
+  </div>
+
+  <script>
+    // JavaScript code
+
+    // Sample array of apps
+    const apps = [
+      {
+        name: "App 1",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu tortor at metus auctor elementum. Integer nec ante vitae eros vehicula luctus.",
+        androidLink: "link_to_app_1_android",
+        iosLink: ""
+      },
+      {
+        name: "App 2",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu tortor at metus auctor elementum. Integer nec ante vitae eros vehicula luctus.",
+        androidLink: "",
+        iosLink: "link_to_app_2_ios"
+      },
+      {
+        name: "App 3",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu tortor at metus auctor elementum. Integer nec ante vitae eros vehicula luctus.",
+        androidLink: "link_to_app_3_android",
+        iosLink: "link_to_app_3_ios"
+      }
+    ];
+
+    // Render the apps
+    const appContainer = document.getElementById("app-container");
+
+    apps.forEach((app) => {
+      const appItem = document.createElement("div");
+      appItem.className = "app-item";
+
+      const appName = document.createElement("span");
+      appName.className = "app-name";
+      appName.textContent = app.name;
+
+      const appDescription = document.createElement("p");
+      appDescription.className = "app-description";
+      appDescription.textContent = app.description;
+
+      const downloadLinks = document.createElement("div");
+      downloadLinks.className = "download-links";
+
+      if (app.androidLink) {
+        const androidLink = document.createElement("a");
+        androidLink.className = "download-link";
+        androidLink.href = app.androidLink;
+        androidLink.textContent = "Download for Android";
+        downloadLinks.appendChild(androidLink);
+      }
+
+      if (app.iosLink) {
+        const iosLink = document.createElement("a");
+        iosLink.className = "download-link";
+        iosLink.href = app.iosLink;
+        iosLink.textContent = "Download for iOS";
+        downloadLinks.appendChild(iosLink);
+      }
+
+      if (!app.androidLink && !app.iosLink) {
+        const disabledLink = document.createElement("span");
+        disabledLink.className = "download-link disabled-link";
+        disabledLink.textContent = "No download available";
+        downloadLinks.appendChild(disabledLink);
+      }
+
+      appItem.appendChild(appName);
+      appItem.appendChild(appDescription);
+      appItem.appendChild(downloadLinks);
+
+      appContainer.appendChild(appItem);
+    });
+  </script>
+</body>
+</html>
