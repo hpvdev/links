@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & About - Our App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            color: #0056b3;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+        }
+
+        p, li {
+            font-size: 16px;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our App Support</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Our App</h2>
+            <ul>
+                <li>Transform your digital workflow with our state-of-the-art application, designed to efficiently convert images into high-quality PDFs.</li>
+                <li>Streamline your document management with tools that allow for seamless selection, editing, and organization of images into comprehensive PDF files.</li>
+                <li>Suitable for a variety of professional, academic, and personal applications, ensuring adaptability and ease of use.</li>
+                <li>Advanced customization options for PDFs include compression settings, resolution adjustments, and signature insertion for enhanced security and personalization.</li>
+                <li>Efficient file management capabilities to save, access, and share your PDFs through integrated email and platform support, facilitating effective communication and collaboration.</li>
+            </ul>
+        </section>
+        <section id="support">
+            <h2>Support</h2>
+            <p>We are committed to providing exceptional support to enhance your experience with our application. Should you encounter any issues or have questions, our dedicated support team is readily available to assist you.</p>
+            <ul>
+                <li><a href="mailto:hybridapptechhub@gmail.com">Contact Us</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>© <span id="year"></span> Hybrid Tech Hub Apps. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
